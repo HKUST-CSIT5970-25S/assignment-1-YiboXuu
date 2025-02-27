@@ -72,6 +72,6 @@
     | ------------------------- | -------------- | -------- |
     | N. Virginia - Oregon      |   32.8 Mbps    |  62.5    |
     | N. Virginia - N. Virginia |   4960 Mbps    |  0.208   |
-    | Oregon - Oregon           |   4930 Mbps    |  0.132   |
+    | Oregon - Oregon           |   4930 Mbps    |  0.148   |
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
