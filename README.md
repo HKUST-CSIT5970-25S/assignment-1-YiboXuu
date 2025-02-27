@@ -46,8 +46,8 @@
     | Size        | CPU performance | Memory performance |
     | ----------- | --------------- | ------------------ |
     | `t2.micro` | Compression: 4125 MIPS Decompression: 3169 MIPS| Integer Average: 19,284.87 MB/s, Float Average: 19,468.35 MB/s            |
-    | `t2.medium`| Compression: 9806 MIPS Decompression: 5914 MIPS| Integer Average: 19,284.87 MB/s, Float Average: 19,468.35 MB/s                     |
-    | `c5d.large`| Compression: 7783 MIPS Decompression: 5209 MIPS| Integer Average: 13,699.20 MB/s, Float Average: 13,555.18 MB/s                    |
+    | `t2.medium`| Compression: 9806 MIPS Decompression: 5914 MIPS| Integer Average: 19,284.87 MB/s, Float Average: 19,468.35 MB/s            |
+    | `c5d.large`| Compression: 7783 MIPS Decompression: 5209 MIPS| Integer Average: 13,699.20 MB/s, Float Average: 13,555.18 MB/s            |
 
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
 
