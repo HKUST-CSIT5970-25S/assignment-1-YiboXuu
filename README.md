@@ -49,6 +49,8 @@
     | `t2.medium`| Compression: 9806 MIPS Decompression: 5914 MIPS| Integer Average: 19,284.87 MB/s, Float Average: 19,468.35 MB/s            |
     | `c5d.large`| Compression: 7783 MIPS Decompression: 5209 MIPS| Integer Average: 13,699.20 MB/s, Float Average: 13,555.18 MB/s            |
 
+   The performance of EC2 instances generally increases with the number of vCPUs and memory, as seen with t2.micro having the lowest CPU (4125 MIPS) and memory performance, while t2.medium performs significantly better. However, c5d.large, optimized for compute, shows higher memory bandwidth than t2.micro but slightly lower CPU performance compared to t2.medium due to its specialized architecture.
+
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI.
 
 ## Question 2: Measure the EC2 Network performance
@@ -64,14 +66,18 @@
     | `m5.large` - `c5n.large`  |  4950 Mbps     |  0.161   |
     | `m5.large` - `t3.medium`  |  2230 Mbps     |  0.585   |
 
+
+      Within the same region, instances of the same type generally experience higher TCP bandwidth and lower RTT, with c5n.large achieving the best performance at 9350 Mbps and 0.101 ms RTT. Instances of different types, like t3.medium - c5n.large, show reduced bandwidth and higher RTT.
     > Region: US East (N. Virginia). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. Note: Use private IP address when using iPerf within the same region. You'll need iPerf for measuring TCP bandwidth and Ping for measuring Round-Trip time.
 
-2. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
+1. (1 mark) What about the network performance for instances deployed in different regions? In order to answer this question, you need to complete the following table.
 
     | Connection                | TCP b/w (Mbps) | RTT (ms) |
     | ------------------------- | -------------- | -------- |
     | N. Virginia - Oregon      |   32.8 Mbps    |  62.5    |
     | N. Virginia - N. Virginia |   4960 Mbps    |  0.208   |
     | Oregon - Oregon           |   4930 Mbps    |  0.148   |
+
+   Instances deployed in different regions, like N. Virginia - Oregon, experience significantly lower TCP bandwidth (32.8 Mbps) and higher RTT (62.5 ms) due to inter-region latency. In contrast, instances within the same region achieve much higher bandwidth and minimal RTT.
  
     > Region: US East (N. Virginia), US West (Oregon). Use `Ubuntu Server 22.04 LTS (HVM)` as AMI. All instances are `c5.large`. Note: Use public IP address when using iPerf within the same region.
