@@ -5,19 +5,24 @@
 
 ---
 
-### Name: 
-### Student Id: 
-### Email: 
+### Name: Yibo Xu
+### Student Id: 21071703
+### Email: yxufb@connect.ust.hk
 
 ---
 
 ## Question 1: Measure the EC2 CPU and Memory performance
 
 1. (1 mark) Report the name of measurement tool used in your measurements (you are free to choose *any* open source measurement software as long as it can measure CPU and memory performance). Please describe your configuration of the measurement tool, and explain why you set such a value for each parameter. Explain what the values obtained from measurement results represent (e.g., the value of your measurement result can be the execution time for a scientific computing task, a score given by the measurement tools or something else).
-
-    > Your answer goes here.
-
-2. (1 mark) Run your measurement tool on general purpose `t2.micro`, `t2.medium`, and `c5d.large` Linux instances, respectively, and find the performance differences among these instances. Launch all the instances in the **US East (N. Virginia)** region. Does the performance of EC2 instances increase commensurate with the increase of the number of vCPUs and memory resource?
+    The measurement tool I used for this task is Phoronix Test Suite v10.8.4.
+    Configuration of the Measurement Tool:
+           CPU Performance Test:
+                   Configuration: The CPU test uses the command phoronix-test-suite run pts/compress-7zip with default parameters.
+                   Reason for Configuration: The default settings ensure consistency across EC2 instance comparisons. 7-Zip is chosen because it is a widely recognized benchmark for CPU performance, reflecting real-world workloads like data processing.
+                   Result Interpretation: The output provides a score representing the number of compression operations completed per second. Higher scores indicate better CPU performance
+           
+                   
+3. (1 mark) Run your measurement tool on general purpose `t2.micro`, `t2.medium`, and `c5d.large` Linux instances, respectively, and find the performance differences among these instances. Launch all the instances in the **US East (N. Virginia)** region. Does the performance of EC2 instances increase commensurate with the increase of the number of vCPUs and memory resource?
 
     In order to answer this question, you need to complete the following table by filling out blanks with the measurement results corresponding to each instance type.
 
