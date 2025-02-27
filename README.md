@@ -28,9 +28,11 @@
 
 2. **Memory Performance Test**:  
    - **Configuration**:  
-     The memory test uses the command `phoronix-test-suite run pts/ramspeed` with the default `Average` run-type and `Integer` benchmark.  
+     The memory test uses the command `phoronix-test-suite run pts/ramspeed`.  
    - **Reason for Configuration**:  
-     The `Average` run-type reduces variability by aggregating results, while the `Integer` benchmark focuses on common memory operations.  
+     The `Average` run-type reduces variability by aggregating results, while the `Integer` benchmark focuses on common memory operations.
+     ![image](https://github.com/user-attachments/assets/3527e4d7-8235-440b-b193-94903353f25f)
+
    - **Result Interpretation**:  
      The output reports **memory speed in MB/s**, indicating how quickly the RAM can read/write data. **Higher values denote better memory performance**. For instance, a result of `15,000 MB/s` means the memory subsystem transferred 15 GB of data per second.
      
@@ -40,7 +42,7 @@
 
     | Size        | CPU performance | Memory performance |
     | ----------- | --------------- | ------------------ |
-    | `t2.micro` | Compression: 4125 MIPS Decompression: 3169 MIPS|                    |
+    | `t2.micro` | Compression: 4125 MIPS Decompression: 3169 MIPS| Int:              |
     | `t2.medium`| Compression: 9806 MIPS Decompression: 5914 MIPS|                    |
     | `c5d.large`| Compression: 7783 MIPS Decompression: 5209 MIPS|                    |
 
