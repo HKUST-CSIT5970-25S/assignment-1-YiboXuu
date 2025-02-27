@@ -24,7 +24,7 @@
    - **Reason for Configuration**:  
      The default settings ensure consistency across EC2 instance comparisons. 7-Zip is chosen because it is a widely recognized benchmark for CPU performance, reflecting real-world workloads like data processing.  
    - **Result Interpretation**:  
-     The output provides a **score** representing the number of compression operations completed per second. **Higher scores indicate better CPU performance**.  
+     The output provides MIPS, MIPS stands for Million Instructions Per Second, which represents the number of compression operations completed per second. **Higher scores indicate better CPU performance**. For example, If a CPU achieves 4125 MIPS in a compression test, it means the CPU can execute 4.125 billion instructions per second for that specific workload.
 
 2. **Memory Performance Test**:  
    - **Configuration**:  
