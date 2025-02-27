@@ -28,10 +28,13 @@
 
 2. **Memory Performance Test**:  
    - **Configuration**:  
-     The memory test uses the command `phoronix-test-suite run pts/ramspeed`.  
+     The memory test uses the command `phoronix-test-suite run pts/ramspeed`.
+     with Type: 6: All memory operation types (Copy, Scale, Add, Triad, Average) will be tested and Benchmark: 3: Both integer and floating-point benchmarks will be run.
+      ![image](https://github.com/user-attachments/assets/3527e4d7-8235-440b-b193-94903353f25f)
    - **Reason for Configuration**:  
-     The `Average` run-type reduces variability by aggregating results, while the `Integer` benchmark focuses on common memory operations.
-     ![image](https://github.com/user-attachments/assets/3527e4d7-8235-440b-b193-94903353f25f)
+     Type: 6: Running all memory operations provides a complete picture of the memory subsystem's performance.
+     Benchmark: 3: Running both integer and floating-point benchmarks ensures the memory performance is tested for workloads that rely on different data types. Integer operations are common in general-purpose computing, while floating-point operations are critical in scientific and engineering applications.
+ 
 
    - **Result Interpretation**:  
      The output reports **memory speed in MB/s**, indicating how quickly the RAM can read/write data. **Higher values denote better memory performance**. For instance, a result of `15,000 MB/s` means the memory subsystem transferred 15 GB of data per second.
